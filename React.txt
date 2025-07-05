@@ -1,0 +1,31 @@
+React:
+ - Component
+ - Props
+ - State Management
+
+React Implement:
+ - Node.js
+ - VSCode Extentions
+  = Auto Rename Tag
+  = Simple React Snippets
+  = ES7+ React/Redux/React-Native snippets
+  = Panda
+  = Settings-> Editor: Word Wrap
+
+React Project:
+	cmd -> check if installed (npm -v)
+	crete project -> npm create vite@latest 
+	
+React Developer Tools install to extens..
+
+API
+ - npm install json-server
+ - create db.json
+ - npx json-server --watch .\src\db.json --port 4000
+ - npm install axios
+
+
+
+
+
+
