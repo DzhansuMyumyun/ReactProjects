@@ -5,7 +5,7 @@ import "../App.css";
 import { useState } from 'react';
 import { use } from 'react';
 
-function Todo({todo, onRemoveTodo}) {
+function Todo({todo, onRemoveTodo, onUpdateTodo}) {
 
   const {id, content} = todo;
 
@@ -17,14 +17,22 @@ function Todo({todo, onRemoveTodo}) {
     onRemoveTodo(id);
   }
 
+  const updateTodoItem = ()=>{
+    const request={
+      id : id,
+      content : updateTodo
+    }
+    onUpdateTodo(request)
+    setEditable(false)
+  }
+
   console.log({todo})
   return (
     <div className='todo-list-container'>
         <div className='todo-list-item'>
-
             <div>
               {
-                editable ? <input value={updateTodo} onChange={(e) => setNewTodo(e.target.valu)} className='todo-input' type="text" />: content
+                editable ? <input value={updateTodo} onChange={(e) => setNewTodo(e.target.valu)} type="text" style={{padding:"1em",border:"none", boxShadow:"rgba(99, 99, 99, 0.2) 0px 2px 8px 0px", width:"350px"}} />: content
               }
             </div>
             <div className='todo-list-remove'>
@@ -33,13 +41,10 @@ function Todo({todo, onRemoveTodo}) {
                 {
 
                   editable 
-                  ? <RxUpdate  style={{fontSize:"25px", color:"green", cursor:"pointer", marginLeft:"5px" }}/> 
+                  ? <RxUpdate  style={{fontSize:"25px", color:"green", cursor:"pointer", marginLeft:"5px" }} onClick={updateTodoItem}/> 
                   :<RxUpdate  style={{fontSize:"25px", color:"green", cursor:"pointer", marginLeft:"5px" }} onClick={() => setEditable(true)}/> 
 
                 }
-
-
-
             </div>
         </div>
     </div>
