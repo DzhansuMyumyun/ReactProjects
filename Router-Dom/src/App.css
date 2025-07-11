@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.header-nav-container{
+    background-color: aliceblue;
+}
+
+.header-nav-container ul{
+    margin-top: 0;
+    padding: 1em;
+    list-style: none;
+    display: flex;
+    
+}
+
+.link{
+    padding: 0 1em;
+    text-decoration: none;
+    color: rgb(78, 77, 77);
+}
