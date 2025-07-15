@@ -24,8 +24,30 @@ API
  - npx json-server --watch .\src\db.json --port 4000
  - npm install axios
 
+REDUX / REDUX Toolkit
+ - There is a STORE for storing the state and functions 
+that are used in common between components.
+ => can share easily
+
+*Icons
+-npm install react-icons --save
+
+*REDUX Toolkit(new and used)
+=> Steps (https://redux-toolkit.js.org/tutorials/quick-start)
+1.
+- npm install @reduxjs/toolkit
+- npm install react-redux
+
+2.create store.jsx + the code from documentation
+3. main.jsx => add APP component between Provider
+4. create the slice
 
 
 
+*React Router
+- npm install react-router-dom
 
+*Material UI
+- npm install @mui/material @emotion/react @emotion/styled
+- npm install @mui/material @mui/styled-engine-sc styled-components
 
